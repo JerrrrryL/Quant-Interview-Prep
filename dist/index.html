@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A focused practice workspace for quantitative finance interview questions."
+    />
+    <meta name="theme-color" content="#101827" />
+    <title>Quant Interview Prep</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23101827'/%3E%3Cpath d='M9 8h9.5a6.5 6.5 0 0 1 0 13H15' fill='none' stroke='%235eead4' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M14 17l-4 4 4 4' fill='none' stroke='%23f8fafc' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Question library">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true">Q</div>
+          <div>
+            <p class="eyebrow">Study desk</p>
+            <h1>Quant Interview Prep</h1>
+          </div>
+        </div>
+
+        <section class="sidebar-section session-panel" aria-labelledby="session-heading">
+          <div class="section-heading-row">
+            <h2 id="session-heading">This session</h2>
+            <span class="live-dot">Live</span>
+          </div>
+          <div class="session-stats">
+            <div>
+              <strong id="session-count">0</strong>
+              <span>reviewed</span>
+            </div>
+            <div>
+              <strong id="mastered-count">0</strong>
+              <span>got it</span>
+            </div>
+            <div>
+              <strong id="session-time">00:00</strong>
+              <span>elapsed</span>
+            </div>
+          </div>
+          <div class="progress-track" aria-label="Session progress">
+            <span id="session-progress"></span>
+          </div>
+        </section>
+
+        <section class="sidebar-section" aria-labelledby="library-heading">
+          <div class="section-heading-row">
+            <h2 id="library-heading">Question bank</h2>
+            <span id="bank-total" class="count-badge">0</span>
+          </div>
+          <label class="search-box">
+            <span class="sr-only">Search questions</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5"></circle>
+              <path d="m16 16 4 4"></path>
+            </svg>
+            <input id="search-input" type="search" placeholder="Search the book" autocomplete="off" />
+            <kbd>/</kbd>
+          </label>
+          <nav id="category-list" class="category-list" aria-label="Filter by chapter"></nav>
+        </section>
+
+        <div class="source-note">
+          <span class="source-icon" aria-hidden="true">G</span>
+          <div>
+            <strong>Green Book</strong>
+            <span>A Practical Guide to Quantitative Finance Interviews</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <button id="mobile-menu" class="icon-button mobile-only" type="button" aria-label="Open question library" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="breadcrumb" aria-label="Current location">
+            <span id="chapter-label">Brain Teasers</span>
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"></path></svg>
+            <strong id="section-label">Logic Reasoning</strong>
+          </div>
+          <div class="topbar-actions">
+            <button id="random-button" class="quiet-button" type="button" title="Pick a random question (R)">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h3c4 0 6 10 10 10h3"></path><path d="m17 14 3 3-3 3"></path><path d="M4 17h3c1.5 0 2.8-1.4 4-3"></path><path d="M14 9c1-1.2 2-2 3-2h3"></path><path d="m17 4 3 3-3 3"></path></svg>
+              Random
+            </button>
+            <button id="reset-button" class="icon-button" type="button" title="Reset filters" aria-label="Reset filters">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.3-5.7L4 8.6"></path><path d="M4 4v4.6h4.6"></path></svg>
+            </button>
+          </div>
+        </header>
+
+        <div class="workspace-inner">
+          <section class="question-stage" aria-live="polite">
+            <div class="question-meta">
+              <div class="question-position">
+                <span id="question-index">Question 1</span>
+                <span class="divider-dot" aria-hidden="true"></span>
+                <span id="page-label">Book page 5</span>
+              </div>
+              <div class="question-meta-actions">
+                <span id="difficulty-label" class="difficulty-badge">Core</span>
+                <a id="source-link" class="source-link" href="./assets/green-book.pdf#page=21" target="_blank" rel="noreferrer">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5"></path><path d="m12 12 7-7"></path><path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path></svg>
+                  Open scan
+                </a>
+              </div>
+            </div>
+
+            <article id="question-card" class="question-card" data-sequence="02.01">
+              <div class="card-accent" aria-hidden="true"></div>
+              <header class="question-header">
+                <p id="question-kicker" class="question-kicker">Logic Reasoning</p>
+                <h2 id="question-title">River crossing</h2>
+              </header>
+              <div id="question-prompt" class="question-prompt"></div>
+
+              <div class="think-strip">
+                <span>Think before revealing</span>
+                <span class="shortcut-hint"><kbd>Space</kbd> reveal answer</span>
+              </div>
+
+              <section class="scratchpad" aria-labelledby="scratchpad-heading">
+                <div class="scratchpad-heading-row">
+                  <label id="scratchpad-heading" for="scratchpad-input">Your working</label>
+                  <button id="clear-notes" type="button">Clear</button>
+                </div>
+                <textarea
+                  id="scratchpad-input"
+                  rows="5"
+                  placeholder="Sketch your approach, assumptions, or equations…"
+                ></textarea>
+              </section>
+
+              <button id="reveal-button" class="reveal-button" type="button">
+                <span class="reveal-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"></path><circle cx="12" cy="12" r="2.5"></circle></svg>
+                </span>
+                <span>Reveal solution</span>
+              </button>
+
+              <section id="solution-panel" class="solution-panel" hidden>
+                <div class="solution-heading-row">
+                  <div>
+                    <p class="eyebrow">Book solution</p>
+                    <h3>One way through</h3>
+                  </div>
+                  <button id="hide-solution" class="text-button" type="button">Hide</button>
+                </div>
+                <div id="solution-content" class="solution-content"></div>
+                <p class="ocr-note">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 8h.01"></path></svg>
+                  <span id="ocr-note-text">Extracted from the scanned book. Use the original page for equations and diagrams.</span>
+                </p>
+                <div class="rating-block">
+                  <p>How did that feel?</p>
+                  <div class="rating-actions" role="group" aria-label="Rate this question">
+                    <button type="button" data-rating="again"><span>1</span> Again</button>
+                    <button type="button" data-rating="hard"><span>2</span> Hard</button>
+                    <button type="button" data-rating="got-it"><span>3</span> Got it</button>
+                  </div>
+                </div>
+              </section>
+            </article>
+
+            <div id="empty-state" class="empty-state" hidden>
+              <div aria-hidden="true">∅</div>
+              <h2>No questions found</h2>
+              <p>Try another chapter or clear your search.</p>
+              <button id="empty-reset" type="button">Show all questions</button>
+            </div>
+
+            <footer class="question-navigation">
+              <button id="previous-button" class="nav-button" type="button">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+                Previous
+                <kbd>K</kbd>
+              </button>
+              <span id="nav-position">1 / 3</span>
+              <button id="next-button" class="nav-button primary" type="button">
+                Next
+                <kbd>J</kbd>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+              </button>
+            </footer>
+          </section>
+
+          <aside class="focus-rail" aria-label="Practice guidance">
+            <section class="focus-card">
+              <p class="eyebrow">Interview mode</p>
+              <h2>Say the reasoning out loud.</h2>
+              <p>State assumptions, simplify the problem, then check edge cases before committing.</p>
+              <div class="focus-timer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l2.8 1.7"></path></svg>
+                <span><strong id="question-time">00:00</strong> on this question</span>
+              </div>
+            </section>
+            <section class="shortcut-card">
+              <h2>Shortcuts</h2>
+              <dl>
+                <div><dt><kbd>Space</kbd></dt><dd>Reveal solution</dd></div>
+                <div><dt><kbd>J</kbd> <kbd>K</kbd></dt><dd>Next / previous</dd></div>
+                <div><dt><kbd>R</kbd></dt><dd>Random question</dd></div>
+                <div><dt><kbd>/</kbd></dt><dd>Search</dd></div>
+              </dl>
+            </section>
+          </aside>
+        </div>
+      </main>
+    </div>
+
+    <div id="sidebar-backdrop" class="sidebar-backdrop" hidden></div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="./questions.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
