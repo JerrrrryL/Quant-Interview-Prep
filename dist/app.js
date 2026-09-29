@@ -79,10 +79,24 @@
       .replaceAll("'", "&#039;");
   }
 
+  function formatInlineNotation(value) {
+    return escapeHtml(value)
+      .replace(
+        /([A-Za-z\u0370-\u03ff])_\(([^()<>]{1,20})\)/g,
+        "$1<sub>$2</sub>"
+      )
+      .replace(
+        /([A-Za-z\u0370-\u03ff])_([A-Z0-9]{1,3}|[a-z][a-z0-9]{0,10})(?=[^A-Za-z0-9]|[A-Z\u0370-\u03ff]|$)/g,
+        "$1<sub>$2</sub>"
+      )
+      .replace(/\^\(([^()<>]{1,20})\)/g, "<sup>$1</sup>")
+      .replace(/\^([A-Za-z0-9]+)/g, "<sup>$1</sup>");
+  }
+
   function textToParagraphs(value) {
     return String(value)
       .split(/\n{2,}/)
-      .map((paragraph) => `<p>${escapeHtml(paragraph.trim())}</p>`)
+      .map((paragraph) => `<p>${formatInlineNotation(paragraph.trim())}</p>`)
       .join("");
   }
 

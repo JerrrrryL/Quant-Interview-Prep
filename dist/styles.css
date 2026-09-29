@@ -652,6 +652,22 @@ kbd {
   margin-top: 1em;
 }
 
+.question-prompt sub,
+.solution-content sub {
+  position: relative;
+  bottom: -0.15em;
+  font-size: 0.72em;
+  line-height: 0;
+}
+
+.question-prompt sup,
+.solution-content sup {
+  position: relative;
+  top: -0.35em;
+  font-size: 0.72em;
+  line-height: 0;
+}
+
 .think-strip {
   display: flex;
   align-items: center;
